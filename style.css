@@ -1,0 +1,303 @@
+/* Petersen Energy – Mini CI
+   Farben:
+   - Deep Energy Blue: #0E2A47
+   - Steel Grey:       #5F6B76
+   - Energy Orange:    #F28C28
+   - Off-White:        #F7F9FB
+*/
+
+:root{
+  --blue:#0E2A47;
+  --grey:#5F6B76;
+  --orange:#F28C28;
+  --bg:#F7F9FB;
+  --card:#FFFFFF;
+  --border:rgba(14,42,71,0.12);
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--blue);
+  line-height: 1.55;
+}
+
+a{ color: inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.container{
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header{
+  position: sticky;
+  top: 0;
+  background: rgba(247,249,251,0.82);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.header-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 0;
+  gap: 16px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.logo{ height: 28px; width: auto; }
+.brand-name{ font-size: 15px; }
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--grey);
+}
+.nav a{ padding: 8px 10px; border-radius: 10px; }
+.nav a:hover{ background: rgba(14,42,71,0.06); text-decoration:none; }
+.nav-cta{
+  color: var(--blue);
+  border: 1px solid var(--border);
+}
+
+.hero{
+  padding: 54px 0 26px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items:start;
+}
+
+.kicker{
+  display:inline-block;
+  color: var(--grey);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.65);
+}
+
+h1{
+  margin: 14px 0 10px;
+  font-size: clamp(32px, 4.2vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.lead{
+  color: var(--grey);
+  font-size: 16px;
+  margin: 0 0 18px;
+  max-width: 62ch;
+}
+
+.hero-actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none !important;
+}
+
+.btn-primary{
+  background: var(--orange);
+  border-color: rgba(0,0,0,0.10);
+  color: #1b1b1b;
+}
+.btn-primary:hover{ filter: brightness(0.96); }
+
+.btn-ghost{
+  background: rgba(255,255,255,0.72);
+  color: var(--blue);
+}
+.btn-ghost:hover{ background: rgba(255,255,255,0.92); }
+
+.trust-row{
+  display:flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: var(--grey);
+  font-size: 13px;
+}
+.trust-item{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+}
+.dot{
+  width: 8px; height: 8px;
+  background: var(--orange);
+  border-radius: 999px;
+}
+
+.hero-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px 18px 14px;
+  box-shadow: 0 8px 22px rgba(14,42,71,0.06);
+}
+.hero-card h2{
+  margin: 2px 0 10px;
+  font-size: 16px;
+}
+.hero-card ul{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--grey);
+}
+.hero-card li{ margin: 8px 0; }
+
+.section{
+  padding: 44px 0;
+}
+.section-muted{
+  background: rgba(14,42,71,0.04);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-head{
+  margin-bottom: 18px;
+}
+.section-head h2{
+  margin: 0 0 6px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.section-head p{
+  margin: 0;
+  color: var(--grey);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+}
+.card h3{
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.card p{
+  margin: 0 0 10px;
+  color: var(--grey);
+}
+.card ul{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--grey);
+}
+.card li{ margin: 7px 0; }
+
+.two-col{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.panel{
+  background: rgba(255,255,255,0.75);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+}
+.panel h3{ margin: 0 0 8px; font-size: 16px; }
+.panel p, .panel ul{ color: var(--grey); }
+.panel ul{ margin: 10px 0 0; padding-left: 18px; }
+.panel li{ margin: 7px 0; }
+
+.contact{
+  display:flex;
+  justify-content:center;
+}
+.contact-card{
+  width: min(720px, 100%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 8px 22px rgba(14,42,71,0.06);
+}
+.contact-card h2{ margin: 0 0 8px; }
+.contact-card p{ margin: 0 0 12px; color: var(--grey); }
+.contact-meta{
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--grey);
+  font-size: 14px;
+  display:grid;
+  gap: 6px;
+}
+.small{ font-size: 12.5px; color: var(--grey); }
+
+.impressum{
+  background: rgba(255,255,255,0.72);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.footer{
+  background: var(--blue);
+  color: rgba(255,255,255,0.86);
+  padding: 18px 0;
+}
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 14px;
+  font-size: 13px;
+}
+.footer a{
+  color: rgba(255,255,255,0.86);
+}
+.footer a:hover{
+  color: #ffffff;
+}
+.footer-links{ display:flex; gap: 12px; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .cards{ grid-template-columns: 1fr; }
+  .two-col{ grid-template-columns: 1fr; }
+  .nav{ display:none; } /* optional: ausblenden auf mobil */
+}
